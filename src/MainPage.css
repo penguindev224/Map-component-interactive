@@ -1,0 +1,47 @@
+/* Container for the main page */
+.main-page-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ensure it takes full viewport height */
+  }
+
+  /* Container for the main page */
+.main-page-container h2 {
+  text-align: center;
+}
+  
+  /* Tabs container */
+  .tab-content-container {
+    flex: 1; /* Takes the remaining space */
+  }
+  
+  /* Tabs buttons styling */
+  .tabs-buttons {
+    padding: 10px;
+  }
+  
+  .tab-button {
+    padding: 10px 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .tab-button.active {
+    background-color: #f68a2b;
+    color: white;
+  }
+  
+  .tab-button:disabled {
+    background-color: #ffdbb7;
+    cursor: not-allowed;
+  }
+  
+  /* Tab content styling */
+  .tab-content {
+    padding: 20px;
+  }
+
+  

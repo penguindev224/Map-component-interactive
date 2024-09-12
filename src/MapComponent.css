@@ -1,0 +1,96 @@
+/* General Layout */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* The map container should fill the available space */
+#root {
+  height: 100vh;
+}
+
+.map-container {
+  width: 100%;
+  height: 80vh;
+}
+
+.popup-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  z-index: 1000;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.popup-image {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.close-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: #0056b3;
+}
+
+/* Hovered location details at bottom for mobile */
+.hovered-location {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  z-index: 1000;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 768px) {
+  .popup-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .popup-image {
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .popup-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .popup-image {
+    max-width: 200px;
+  }
+
+  .map-container {
+    height: 60vh;
+  }
+}

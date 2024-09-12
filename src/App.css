@@ -1,0 +1,73 @@
+/* Container for the entire app layout */
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Navigation bar styling */
+.nav-bar {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5%;
+  height: 100%;
+  background-color: #f3f3f3;
+  overflow-y: auto;
+}
+
+.nav-bar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-bar ul li {
+  margin-bottom: 15px;
+  line-height: 15pt;
+}
+
+.nav-bar ul li p {
+  color: #b8b8b8;
+}
+
+.nav-bar ul li a {
+  text-decoration: none;
+  color: #525252;
+}
+
+.nav-bar ul li a:hover {
+  color: #2cd851;
+}
+
+/* Main content section styling */
+.main-content {
+  position: absolute;
+  top: 0;
+  left: 7%;
+  width: 90%;
+  height: 100%;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Full-screen mode - hide nav-bar and make content full width */
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    display: none;
+  }
+  .main-content {
+    left: 0;
+    width: 93%;
+  }
+}
+
+/* Responsive design for larger screens */
+@media screen and (min-width: 769px) {
+  .nav-bar {
+    width: 10%; /* Make nav-bar larger on bigger screens */
+  }
+  .main-content {
+    left: 10%;
+    width: 87%;
+  }
+}
